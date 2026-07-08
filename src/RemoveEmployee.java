@@ -30,9 +30,11 @@ public class RemoveEmployee {
 
                 if (employees.get(i).id.equals(id)) {
 
+                    String employeeName = employees.get(i).name;
+
                     employees.remove(i);
 
-                    System.out.println("\nEmployee removed successfully!");
+                    System.out.println("\n" + employeeName + " removed successfully!");
 
                     found = true;
                     break;
