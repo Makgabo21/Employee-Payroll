@@ -1,5 +1,5 @@
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -15,18 +15,20 @@ public class Main {
             System.out.println("\n===== EMPLOYEE PAYROLL =====");
             System.out.println("1. Add Employee");
             System.out.println("2. View Employees");
+            //Charlotte:  remove and exit
             System.out.println("5. Remove Employee");
             System.out.println("6. Exit");
             System.out.print("Choice: ");
 
+            // Check that the user entered a number
             if (!input.hasNextInt()) {
                 System.out.println("Invalid input! Please enter a number between 1 and 6.");
-                input.next();
+                input.next(); // Remove the invalid input
                 continue;
             }
 
             choice = input.nextInt();
-            input.nextLine();
+            input.nextLine(); // Clear the newline
 
             switch (choice) {
 
@@ -38,10 +40,19 @@ public class Main {
                     ViewEmployee.viewEmployees(employees);
                     break;
 
+                // ================= CHARLOTTE - REMOVE EMPLOYEE & EXIT START =================
+
+                case 5:
+                    RemoveEmployee.removeEmployee(employees);
+                    break;
+
                 case 6:
-                    System.out.println("Exiting program...");
+                    System.out.println("\nThank you for using Employee Payroll System.");
                     input.close();
-                    return;
+                    System.exit(0);
+                    break;
+
+// ================= CHARLOTTE - REMOVE EMPLOYEE & EXIT END =================
 
                 default:
                     System.out.println("Invalid option!");
