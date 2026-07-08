@@ -128,7 +128,7 @@ public class AddEmployee {
 
         while (true) {
 
-            System.out.print("Enter Base Salary: ");
+            System.out.print("Enter Basic Salary: ");
 
             if (input.hasNextDouble()) {
 
