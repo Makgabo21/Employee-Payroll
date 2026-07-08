@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -15,17 +15,20 @@ public class Main {
             System.out.println("\n===== EMPLOYEE PAYROLL =====");
             System.out.println("1. Add Employee");
             System.out.println("2. View Employees");
+            System.out.println("3. Search Employee");
+            System.out.println("4. Calculate Payroll");
+            System.out.println("5. Remove Employee");
+            System.out.println("6. Exit");
             System.out.print("Choice: ");
 
-            // Check that the user entered a number
             if (!input.hasNextInt()) {
-                System.out.println("Invalid input! Please enter 1 or 2.");
-                input.next(); // Remove the invalid input
+                System.out.println("Invalid input! Please enter a number between 1 and 6.");
+                input.next();
                 continue;
             }
 
             choice = input.nextInt();
-            input.nextLine(); // Clear the newline
+            input.nextLine();
 
             switch (choice) {
 
@@ -36,6 +39,11 @@ public class Main {
                 case 2:
                     ViewEmployee.viewEmployees(employees);
                     break;
+
+                case 6:
+                    System.out.println("Exiting program...");
+                    input.close();
+                    return;
 
                 default:
                     System.out.println("Invalid option!");

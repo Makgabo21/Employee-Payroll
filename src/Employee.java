@@ -1,9 +1,9 @@
-public class Employee {
+public abstract class Employee {
 
-    String id;
-    String name;
-    String surname;
-    double salary;
+    protected String id;
+    protected String name;
+    protected String surname;
+    protected double salary;
 
     public Employee(String id, String name, String surname, double salary) {
         this.id = id;
@@ -11,4 +11,6 @@ public class Employee {
         this.surname = surname;
         this.salary = salary;
     }
+
+    public abstract double calculateSalary();
 }
