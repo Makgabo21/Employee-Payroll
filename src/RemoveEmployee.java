@@ -7,7 +7,6 @@ public class RemoveEmployee {
 
         Scanner input = new Scanner(System.in);
 
-        // ================= CHARLOTTE - REMOVE EMPLOYEE START =================
 
         if (employees.isEmpty()) {
             System.out.println("No employees to remove.");
@@ -48,6 +47,5 @@ public class RemoveEmployee {
             System.out.println("Employee ID not found. Please try again.");
         }
 
-        // ================= CHARLOTTE - REMOVE EMPLOYEE END =================
     }
 }

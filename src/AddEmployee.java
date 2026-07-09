@@ -7,7 +7,6 @@ public class AddEmployee {
 
         Scanner input = new Scanner(System.in);
 
-        // ================= EMPLOYEE ID =================
 
         String id;
 
@@ -48,7 +47,6 @@ public class AddEmployee {
             break;
         }
 
-        // ================= NAME =================
 
         String name;
 
@@ -85,7 +83,6 @@ public class AddEmployee {
             break;
         }
 
-        // ================= SURNAME =================
 
         String surname;
 
@@ -122,7 +119,6 @@ public class AddEmployee {
             break;
         }
 
-        // ================= SALARY =================
 
         double salary;
 
@@ -148,7 +144,6 @@ public class AddEmployee {
             }
         }
 
-        // ================= EMPLOYEE TYPE =================
 
         int type;
 
@@ -175,7 +170,6 @@ public class AddEmployee {
             System.out.println("Invalid choice.");
         }
 
-        // ================= CREATE EMPLOYEE =================
 
         switch (type) {
 
