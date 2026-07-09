@@ -17,20 +17,18 @@ public class Main {
             System.out.println("2. View Employees");
             System.out.println("3. Search Employee");
             System.out.println("4. payroll");
-            //Charlotte:  remove and exit
             System.out.println("5. Remove Employee");
             System.out.println("6. Exit");
             System.out.print("Choice: ");
 
-            // Check that the user entered a number
             if (!input.hasNextInt()) {
                 System.out.println("Invalid input! Please enter a number between 1 and 6.");
-                input.next(); // Remove the invalid input
+                input.next();
                 continue;
             }
 
             choice = input.nextInt();
-            input.nextLine(); // Clear the newline
+            input.nextLine();
 
             switch (choice) {
 
@@ -49,7 +47,6 @@ public class Main {
                 case 4:
                     Payroll.calculatePayroll(employees);
                     break;
-                // ================= CHARLOTTE - REMOVE EMPLOYEE & EXIT START =================
 
                 case 5:
                     RemoveEmployee.removeEmployee(employees);
@@ -61,7 +58,6 @@ public class Main {
                     System.exit(0);
                     break;
 
-// ================= CHARLOTTE - REMOVE EMPLOYEE & EXIT END =================
 
                 default:
                     System.out.println("Invalid option!");
